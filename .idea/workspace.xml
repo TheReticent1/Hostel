@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd18bfb0-5fa8-4aa3-9970-7eeb13b74a42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
     </list>
     <ignored path="hostel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +30,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="332">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="116" selection-end-column="9" />
               <folding>
-                <element signature="e#5185#5190#0" expanded="true" />
-                <element signature="e#5233#5239#0" expanded="true" />
+                <element signature="e#5198#5203#0" expanded="true" />
+                <element signature="e#5246#5252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,11 +43,11 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
-                <element signature="e#1817#1822#0" expanded="true" />
-                <element signature="e#1865#1871#0" expanded="true" />
+                <element signature="e#1694#1699#0" expanded="true" />
+                <element signature="e#1742#1748#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +57,21 @@
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="557">
-              <caret line="296" column="15" selection-start-line="296" selection-start-column="15" selection-end-line="296" selection-end-column="15" />
+              <caret line="327" column="24" selection-start-line="327" selection-start-column="24" selection-end-line="327" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grievance.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Grievance.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="838">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+              <folding>
+                <element signature="e#2145#2150#0" expanded="true" />
+                <element signature="e#2193#2199#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +85,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Grievance.html" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/css/index.css" />
       </list>
@@ -228,12 +242,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550591133020</updated>
       <workItem from="1550591134915" duration="3046000" />
-      <workItem from="1550643725872" duration="2603000" />
+      <workItem from="1550643725872" duration="6834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5649000" />
+    <option name="totallyTimeSpent" value="9880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -280,8 +294,8 @@
         <state relative-caret-position="1545">
           <caret line="103" column="84" selection-start-line="103" selection-start-column="84" selection-end-line="103" selection-end-column="84" />
           <folding>
-            <element signature="e#5185#5190#0" expanded="true" />
-            <element signature="e#5233#5239#0" expanded="true" />
+            <element signature="e#5198#5203#0" expanded="true" />
+            <element signature="e#5246#5252#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -296,22 +310,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="332">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="116" selection-end-column="9" />
           <folding>
-            <element signature="e#5185#5190#0" expanded="true" />
-            <element signature="e#5233#5239#0" expanded="true" />
+            <element signature="e#5198#5203#0" expanded="true" />
+            <element signature="e#5246#5252#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <element signature="e#1817#1822#0" expanded="true" />
-            <element signature="e#1865#1871#0" expanded="true" />
+            <element signature="e#1694#1699#0" expanded="true" />
+            <element signature="e#1742#1748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grievance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+          <folding>
+            <element signature="e#2145#2150#0" expanded="true" />
+            <element signature="e#2193#2199#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -319,7 +344,7 @@
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
-          <caret line="296" column="15" selection-start-line="296" selection-start-column="15" selection-end-line="296" selection-end-column="15" />
+          <caret line="327" column="24" selection-start-line="327" selection-start-column="24" selection-end-line="327" selection-end-column="24" />
           <folding />
         </state>
       </provider>

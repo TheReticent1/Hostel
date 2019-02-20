@@ -258,11 +258,11 @@ header img {
     border-radius: 10px;
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
 }
-.login h1{
+.login h1,.grievance h1{
     padding-top: 30px;
     width: 100%;
     text-align: center;
-    font: 600 28px 'Roboto Slab';
+    font:600 24px 'Roboto Slab';
 }
 .control{
     width: 90%;
@@ -273,6 +273,9 @@ header img {
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 5px;
     outline-style: none;
+}
+.control:focus{
+    border: 1px solid rgba(0,0,0,0.3);
 }
 .login-btn{
     width: 90%;
@@ -286,13 +289,41 @@ header img {
     background: royalblue;
     transition: 0.3s;
 }
-.login-btn:hover{
+.login-btn:hover,.submit-btn:hover{
     cursor: pointer;
     opacity: 0.9;
     box-shadow: 0 4px 2px rgba(0,0,0,0.3);
 }
-.login-btn:active{
+.login-btn:active,.submit-btn:active{
     transform: translateY(2px);
     box-shadow: none;
     opacity: 1;
+}
+
+/*Grievance.html*/
+
+.grievance{
+    max-width: 600px !important;
+    margin: 40px auto;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+.marginer{
+    margin: 10px 30px;
+}
+.txt-area{
+    border: none;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
+}
+.submit-btn{
+    width: 90%;
+    padding: 10px;
+    font: 14px 'Roboto Slab';
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: #09AB00;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    outline-style: none;
 }
