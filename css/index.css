@@ -248,3 +248,51 @@ header img {
     font: 12px 'Roboto Slab';
     background: #fff;
 }
+
+/*login.html*/
+
+.login{
+    width: 400px;
+    height: 300px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+}
+.login h1{
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+    font: 600 28px 'Roboto Slab';
+}
+.control{
+    width: 90%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin:10px 20px;
+    font: 12px 'Roboto Slab';
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    outline-style: none;
+}
+.login-btn{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font: 14px 'Roboto Slab';
+    color: #fff;
+    outline-style: none;
+    background: royalblue;
+    transition: 0.3s;
+}
+.login-btn:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 0 4px 2px rgba(0,0,0,0.3);
+}
+.login-btn:active{
+    transform: translateY(2px);
+    box-shadow: none;
+    opacity: 1;
+}
