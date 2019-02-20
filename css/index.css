@@ -170,8 +170,19 @@ header img {
     top: 0;
     left: 0;
     background:#F5F5F5;
+    opacity: 1;
+    animation: menu 0.3s linear;
 }
-
+@keyframes menu {
+    0%{
+       transform: translateY(-100px);
+    }
+    50%{
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 .staff {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     width: 100%;
@@ -326,4 +337,27 @@ header img {
     margin-bottom: 20px;
     transition: 0.3s;
     outline-style: none;
+}
+
+/*Notice.html*/
+
+.notice{
+    width: 1000px;
+    margin: 40px auto;
+}
+.notice h1{
+    font: 24px 'Roboto Slab';
+    text-align: center;
+}
+.notice table, .notice td, .notice th{
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    border-collapse: collapse;
+}
+.notice table td, .notice table th{
+    padding: 10px;
+    font: 12px 'Roboto Slab';
+}
+.notice table th{
+    font: 600 14px 'Roboto Slab';
 }
