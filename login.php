@@ -22,11 +22,11 @@
 <div class="menu-bar">
     <ul>
         <li>GPW Hostel</li>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="#">Apply</a></li>
-        <li><a href="Notice.html">Notice</a></li>
-        <li><a href="Grievance.html">Grievance</a></li>
-        <li><a href="login.html">Staff Login</a></li>
+        <li><a href="Notice.php">Notice</a></li>
+        <li><a href="Grievance.php">Grievance</a></li>
+        <li><a href="login.php">Staff Login</a></li>
     </ul>
 </div>
 <div class="login">

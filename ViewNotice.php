@@ -10,14 +10,14 @@
 <div class="menu-bar">
     <ul>
         <li>GPW Hostel Panel</li>
-        <li><a href="AdminPanel.html">Hostel&nbsp;Forms</a></li>
-        <li><a href="GrievancePanel.html">Grievance</a></li>
-        <li><a href="ViewNotice.html">Add&nbsp;Notice</a></li>
+        <li><a href="AdminPanel.php">Hostel&nbsp;Forms</a></li>
+        <li><a href="GrievancePanel.php">Grievance</a></li>
+        <li><a href="ViewNotice.php">Add&nbsp;Notice</a></li>
         <li><a href="#"><i class="fa fa-power-off"> </i>&nbsp;Logout</a></li>
     </ul>
 </div>
 <div class="panel">
-    <a href="NoticePanel.html" class="add-notice">Add Notice</a>
+    <a href="NoticePanel.php" class="add-notice">Add Notice</a>
     <h1>Notice Board</h1>
     <table>
         <tbody>
@@ -162,7 +162,7 @@
 <script>
     $(document).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll >= 150) {
+        if (scroll >= 50) {
             $(".menu-bar").addClass("positions");
         } else {
             $(".menu-bar").removeClass("positions")
