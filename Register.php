@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title> Add Notice</title>
+    <title> Staff Login</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -17,14 +17,12 @@
         <li><a href="#"><i class="fa fa-power-off"> </i>&nbsp;Logout</a></li>
     </ul>
 </div>
-<div class="grievance">
-    <h1>Add Notice</h1>
-    <form>
-        <input type="text" placeholder="Title" class="control marginer">
-        <input type="file" class="control marginer">
-        <textarea rows="5" cols="50" placeholder="Description"
-                  class="control marginer txt-area"></textarea>
-        <input type="submit" value="Add Notice" class="submit-btn marginer">
+<div class="login">
+    <form action="./Actions/register.php" method="post">
+        <h1>Register</h1>
+        <input type="text" class="control" placeholder="&#xf2bd; Username" style="font-family: FontAwesome;" name="uname">
+        <input type="password" class="control" placeholder="&#xf084; Password" style="font-family: FontAwesome;" name="pass">
+        <input type="submit" class="login-btn" value="&#xf090;  Register" style="font-family: FontAwesome;">
     </form>
 </div>
 <footer class="footer">
@@ -35,15 +33,5 @@
     </div>
     <p>All right reserved &reg; Government Polytechnic Washim & Copyright &copy; by Digital Sheets @2019. </p>
 </footer>
-<script>
-    $(document).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 50) {
-            $(".menu-bar").addClass("positions");
-        } else {
-            $(".menu-bar").removeClass("positions")
-        }
-    });
-</script>
 </body>
 </html>
