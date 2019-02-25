@@ -111,24 +111,6 @@
         </tbody>
     </table>
 </div>
-<footer class="footer">
-    <div class="footer-soc">
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-    </div>
-    <p>All right reserved &reg; Government Polytechnic Washim & Copyright &copy; by Digital Sheets @2019. </p>
-</footer>
-
-<script>
-    $(document).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 150) {
-            $(".menu-bar").addClass("positions");
-        } else {
-            $(".menu-bar").removeClass("positions")
-        }
-    });
-</script>
+<?php include('footer.php') ?>
 </body>
 </html>

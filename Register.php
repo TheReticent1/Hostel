@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('connection.php');
+include ('SessionVarCheck.php');
+?>
 <html>
 <head>
     <title> Staff Login</title>
@@ -7,31 +12,36 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
-<div class="menu-bar">
-    <ul>
-        <li>GPW Hostel Panel</li>
-        <li><a href="AdminPanel.php">Hostel&nbsp;Forms</a></li>
-        <li><a href="GrievancePanel.php">Grievance</a></li>
-        <li><a href="ViewNotice.php">Add&nbsp;Notice</a></li>
-        <li><a href="Register.php">Register&nbsp;User</a></li>
-        <li><a href="#"><i class="fa fa-power-off"> </i>&nbsp;Logout</a></li>
-    </ul>
-</div>
+<?php include('AdminMenubar.php')?>
 <div class="login">
-    <form action="./Actions/register.php" method="post">
+    <form action="" method="post">
         <h1>Register</h1>
         <input type="text" class="control" placeholder="&#xf2bd; Username" style="font-family: FontAwesome;" name="uname">
         <input type="password" class="control" placeholder="&#xf084; Password" style="font-family: FontAwesome;" name="pass">
-        <input type="submit" class="login-btn" value="&#xf090;  Register" style="font-family: FontAwesome;">
+        <input type="submit" class="login-btn" value="&#xf090;  Register" style="font-family: FontAwesome;" name="register">
     </form>
+
+<!--    register script-->
+    <?php
+    if (isset($_POST['register'])){
+        $name = $_POST['uname'];
+        $pass = $_POST['pass'];
+        $hash = password_hash($pass,PASSWORD_DEFAULT);
+        $q1 = "select * from login where username = '$name'";
+        $result = mysqli_query($con,$q1);
+        $num = mysqli_num_rows($result);
+
+        if($num == 1){
+            echo '<p>User already exist</p>';
+        }else{
+            $reg = "insert into login(username,pass) values ('$name' , '$hash')";
+            mysqli_query($con,$reg);
+            echo "<p>Register successfully</p>";
+            header('Location:login.php');
+        }
+    }
+    ?>
 </div>
-<footer class="footer">
-    <div class="footer-soc">
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-    </div>
-    <p>All right reserved &reg; Government Polytechnic Washim & Copyright &copy; by Digital Sheets @2019. </p>
-</footer>
+<?php include('footer.php') ?>
 </body>
 </html>
