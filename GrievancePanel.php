@@ -1,4 +1,10 @@
-<?php include ('SessionVarCheck.php') ?>
+<?php
+session_start();
+include('SessionVarCheck.php');
+include('connection.php');
+$q1 = "select * from grievance";
+$result = mysqli_query($con, $q1);
+?>
 <html>
 <head>
     <title> Staff Login</title>
@@ -8,141 +14,34 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
-<?php include('AdminMenubar.php')?>
+<?php include('AdminMenubar.php') ?>
 <div class="panel">
     <h1>Grievance Records</h1>
-    <table>
+    <table style="margin: auto">
         <tbody>
         <tr>
             <th>Index</th>
             <th>Name</th>
             <th>Department</th>
+            <th>Year</th>
             <th>Conatact</th>
             <th>Email id</th>
             <th>Complaint</th>
             <th>Action</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Kamlesh D. Mohane</td>
-            <td>Information Technology</td>
-            <td>+91 8830374665</td>
-            <td>kamleshmohane77@gmail.com</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, doloremque eius eum facere fugit
-                maiores nulla numquam quam sapiente unde ut. Atque aut, debitis ea eos impedit qui voluptates.
-            </td>
-            <td><input type="checkbox"> <i class="fa fa-trash-o"></i></td>
-        </tr>
+        <?php
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr><td>{$row['id']}</td>
+                        <td>{$row['s_name']}</td>
+                        <td>{$row['department']}</td>
+                        <td>{$row['education_year']}</td>
+                        <td>{$row['contact']}</td>
+                        <td>{$row['email']}</td>
+                        <td>{$row['complaint']}</td>
+                        <td><input type=\"checkbox\"> <i class=\"fa fa-trash-o\"></i></td>
+                   </tr>";
+        }
+        ?>
         </tbody>
     </table>
 </div>

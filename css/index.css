@@ -351,6 +351,9 @@ header img {
     text-align: center;
     color: #333;
 }
+.notice table{
+    margin:auto;
+}
 .notice table, .notice td, .notice th{
     border: 1px solid rgba(0,0,0,0.1);
     text-align: center;
@@ -380,6 +383,7 @@ header img {
 .panel table{
     border-collapse: collapse;
     border: 1px solid rgba(0,0,0,0.2);
+    margin:auto;
 }
 .panel table td{
     padding: 10px;
