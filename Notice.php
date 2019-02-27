@@ -14,100 +14,26 @@
         <tbody>
         <tr>
             <th>Index</th>
+            <th>Title</th>
             <th>Description</th>
             <th>PDF File</th>
             <th>Date</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi dolorem et omnis pariatur
-                quaerat. Ad commodi corporis dolore libero minima quasi suscipit veritatis voluptates! Atque, minus,
-                non. Sequi, totam.
-            </td>
-            <td><i class="fa fa-file-pdf-o" aria-hidden="true"> </i></td>
-            <td>27/10/1994</td>
-        </tr>
+        <?php
+        session_start();
+        include ('connection.php');
+        $query="select * from notice";
+        $res=mysqli_query($con,$query);
+        while ($rows=mysqli_fetch_assoc($res)){
+            echo "<tr>
+                        <td>{$rows['id']}</td>
+                        <td>{$rows['title']}</td>
+                        <td>{$rows['description']}</td>
+                        <td><a target='_blank' href={$rows['file_path']}><i class=\"fa fa-file-pdf-o\" aria-hidden=\"true\"> </i></td>
+                        <td>{$rows['entry_date']}</td>
+                      </tr>";
+        }
+        ?>
         </tbody>
     </table>
 </div>
