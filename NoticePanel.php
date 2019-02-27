@@ -21,7 +21,7 @@ include ('SessionVarCheck.php');
         <input type="submit" value="Add Notice" class="submit-btn marginer" name="submit">
     </form>
     <?php
-        session_start();
+//        session_start();
         include ('connection.php');
         if(isset($_POST['submit'])){
             $file=$_FILES['file'];

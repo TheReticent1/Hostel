@@ -23,7 +23,7 @@
             <th>Action</th>
         </tr>
         <?php
-            session_start();
+//            session_start();
             include ('connection.php');
             $query="select * from notice";
             $res=mysqli_query($con,$query);
