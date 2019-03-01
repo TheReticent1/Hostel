@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('SessionVarCheck.php');
 include('connection.php');
 $q1 = "select * from grievance";
