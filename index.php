@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Hostel Management</title>
+    <title>Hostel Management, Washim</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
