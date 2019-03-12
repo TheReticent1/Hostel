@@ -14,7 +14,7 @@
     <ul>
         <li>GPW Hostel</li>
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">Apply</a></li>
+        <li><a href="hostel.php">Apply</a></li>
         <li><a href="Notice.php">Notice</a></li>
         <li><a href="Grievance.php">Grievance</a></li>
         <li><a href="login.php">Staff Login</a></li>
