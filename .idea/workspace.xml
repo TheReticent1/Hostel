@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e343fff3-2dcb-4ddc-8bc3-314c7981b852" name="Default Changelist" comment="Update:&#10;- Added Grievance table in the database.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/AdminPanel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menubar.php" beforeDir="false" afterPath="$PROJECT_DIR$/menubar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel.php" beforeDir="false" afterPath="$PROJECT_DIR$/hostel.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,65 +21,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hostel.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AdminPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="238" column="17" selection-start-line="238" selection-start-column="17" selection-end-line="238" selection-end-column="17" />
+            <state relative-caret-position="375">
+              <caret line="37" selection-start-line="37" selection-end-line="71" />
+              <folding>
+                <element signature="e#1300#1305#0#PHP" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NoticePanel.php">
+        <entry file="file://$PROJECT_DIR$/A_viewhostel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+              <caret line="152" column="29" lean-forward="true" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Notice.php">
+        <entry file="file://$PROJECT_DIR$/A_girlshostel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GrievancePanel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Grievance.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menubar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+            <state relative-caret-position="241">
+              <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +60,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7305">
-              <caret line="487" column="14" selection-start-line="487" selection-start-column="14" selection-end-line="487" selection-end-column="14" />
+            <state relative-caret-position="299">
+              <caret line="492" column="17" lean-forward="true" selection-start-line="492" selection-start-column="17" selection-end-line="492" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hostel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="242" column="69" selection-start-line="242" selection-start-column="69" selection-end-line="242" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -101,6 +84,7 @@
       <find>h1</find>
       <find>container</find>
       <find>contr</find>
+      <find>host</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,7 +100,10 @@
       <list>
         <option value="$PROJECT_DIR$/GrievancePanel.php" />
         <option value="$PROJECT_DIR$/menubar.php" />
+        <option value="$PROJECT_DIR$/AdminPanel.php" />
+        <option value="$PROJECT_DIR$/A_viewhostel.php" />
         <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/A_girlshostel.php" />
         <option value="$PROJECT_DIR$/hostel.php" />
       </list>
     </option>
@@ -160,6 +147,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../gpw" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,7 +203,9 @@
       <workItem from="1551945593913" duration="1012000" />
       <workItem from="1552297834769" duration="11338000" />
       <workItem from="1552385227201" duration="13148000" />
-      <workItem from="1552411392688" duration="1152000" />
+      <workItem from="1552411392688" duration="1483000" />
+      <workItem from="1552466373604" duration="4009000" />
+      <workItem from="1552638654984" duration="5995000" />
     </task>
     <task id="LOCAL-00001" summary="Update:&#10;- Added Grievance table in the database.">
       <created>1551420437011</created>
@@ -235,7 +225,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36226000" />
+    <option name="totallyTimeSpent" value="46561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,10 +237,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-14" width="1311" height="783" extended-state="6" />
+    <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2286171" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23820943" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -332,13 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AdminPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SessionVarCheck.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -367,13 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hostel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="238" column="17" selection-start-line="238" selection-start-column="17" selection-end-line="238" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NoticePanel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -390,15 +366,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GrievancePanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="75">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Grievance.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
+          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -418,8 +394,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7305">
-          <caret line="487" column="14" selection-start-line="487" selection-start-column="14" selection-end-line="487" selection-end-column="14" />
+        <state relative-caret-position="299">
+          <caret line="492" column="17" lean-forward="true" selection-start-line="492" selection-start-column="17" selection-end-line="492" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/A_viewhostel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="152" column="29" lean-forward="true" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdminPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="37" selection-start-line="37" selection-end-line="71" />
+          <folding>
+            <element signature="e#1300#1305#0#PHP" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/A_girlshostel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#form#0;n#td#12;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hostel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="242" column="69" selection-start-line="242" selection-start-column="69" selection-end-line="242" selection-end-column="69" />
         </state>
       </provider>
     </entry>

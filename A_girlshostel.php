@@ -1,7 +1,7 @@
 <?php
 include('SessionVarCheck.php');
 include('connection.php');
-$q1 = "select * from hostel where gender = 'male'";
+$q1 = "select * from hostel where gender = 'female'";
 $res = mysqli_query($con, $q1);
 ?>
 <html>
@@ -17,7 +17,7 @@ $res = mysqli_query($con, $q1);
 <div class="panel">
     <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px">Boys</a>
     <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px">Girls</a>
-    <h1>Boys Hostel Records</h1>
+    <h1>Girls Hostel Records</h1>
     <table style="margin: auto">
         <tbody>
         <tr>
@@ -69,6 +69,7 @@ $res = mysqli_query($con, $q1);
             }
         }
         ?>
+
         </tbody>
     </table>
 </div>

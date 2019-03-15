@@ -209,6 +209,18 @@
                 $tmp_name=$_FILES['r_file']['tmp_name'];
                 $target =getcwd()."/uploads";
 
+                $percent1=($omarks1 / $tmarks1)*100;
+                if ($tmarks2 != null && $omarks2 != null){
+                    $percent2=($omarks2 / $tmarks2)*100;
+                }else{
+                    $percent2 = 0;
+                }
+                if ($tmarks3 != null && $omarks3 != null){
+                    $percent3=($omarks3 / $tmarks3)*100;
+                }else{
+                    $percent3 = 0;
+                }
+
                 if ($f_name.trim(" ") == null && $g_name.trim(" ") == null){
                     echo "<p>Please enter either father or guardian name</p>";
                 }elseif ($g_name.trim(" ") != null && $g_relation.trim(" ") == null){
@@ -223,18 +235,18 @@
                     echo "<p>Please upload reserve category proof document.</p>";
                 }elseif ($hostel == 'yes' && $prev_room.trim("") == null){
                     echo "<p>Please enter previous room no.</p>";
-                }elseif ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png'){
-                    if(move_uploaded_file("$tmp_name", "$target/$file_name")){
-
-                    }else{
+                } elseif ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png') {
+                    if (!move_uploaded_file("$tmp_name", "$target/$file_name")) {
                         echo "<p>Error in moving file.</p>";
+                        $file_path = "";
+                    }else{
+                        $file_path = "/hostel/uploads/" . $file_name;
                     }
                 }
-                $file_path="/hostel/uploads/".$file_name;
-                $q="INSERT INTO `hostel`(`s_name`, `e_year`, `semester`, `branch`, `gender`, `father_name`, `guardian`, `student_address`, `parent_address`, `parent_mobile`, `guardian_relation`, `reserve_cate`, `reserve_details`, `reserve_file`, `hostel_before`, `prev_year`, `prev_branch`, `prev_room`, `exam1`, `total1`, `obtain1`, `class1`, `exam2`, `total2`, `obtain2`, `class2`, `exam3`, `total3`, `obtain3`, `class3`, `policy`, `d_o_application`) VALUES ('$s_name','$year','$sem','$branch','$gender','$f_name','$g_name','$s_address','$f_address','$f_mob','$g_relation','$res','$r_details','$file_path','$hostel','$prev_year','$prev_branch','$prev_room','$exam1','$tmarks1','$omarks1','$class1','$exam2','$tmarks2','$omarks2','$class2','$exam3','$tmarks3','$omarks3','$class3','$policy',CURRENT_DATE)";
-                if (mysqli_query($con,$q)){
+                $q = "INSERT INTO `hostel`(`s_name`, `e_year`, `semester`, `branch`, `gender`, `father_name`, `guardian`, `student_address`, `parent_address`, `parent_mobile`, `guardian_relation`, `reserve_cate`, `reserve_details`, `reserve_file`, `hostel_before`, `prev_year`, `prev_branch`, `prev_room`, `exam1`, `total1`, `obtain1`, `class1`, `exam2`, `total2`, `obtain2`, `class2`, `exam3`, `total3`, `obtain3`, `class3`, `policy`, `d_o_application`,`percent1`,`percent2`,`percent3`) VALUES ('$s_name','$year','$sem','$branch','$gender','$f_name','$g_name','$s_address','$f_address','$f_mob','$g_relation','$res','$r_details','$file_path','$hostel','$prev_year','$prev_branch','$prev_room','$exam1','$tmarks1','$omarks1','$class1','$exam2','$tmarks2','$omarks2','$class2','$exam3','$tmarks3','$omarks3','$class3','$policy',CURRENT_DATE,'$percent1','$percent2','$percent3')";
+                if (mysqli_query($con, $q)) {
                     echo "<p>Form submitted Successfully</p>";
-                }else{
+                } else {
                     echo "<p>Error in submitting.</p>";
                 }
             }
