@@ -1,7 +1,7 @@
 <?php
 include('SessionVarCheck.php');
 include('connection.php');
-$q1 = "select * from hostel where e_year = 'second year' and  semester = 'third sem' and gender = 'male'";
+$q1 = "select * from hostel where e_year = 'third year' and  semester = 'fifth sem' and gender = 'male' and branch = 'information technology' order by percent3 desc ";
 $res = mysqli_query($con, $q1);
 ?>
 <html>
@@ -15,7 +15,7 @@ $res = mysqli_query($con, $q1);
 <body>
 <?php include('AdminMenubar.php') ?>
 <div class="panel">
-    <h1>Boys Hostel Second Year Records</h1>
+    <h1>Boys Third Year I.F Records</h1>
     <table style="margin: auto">
         <tbody>
         <tr>
@@ -37,8 +37,8 @@ $res = mysqli_query($con, $q1);
                         <td>{$row['e_year']}</td>
                         <td>{$row['semester']}</td>
                         <td>{$row['reserve_cate']}</td>
-                        <td>{$row['exam2']}</td>
-                        <td>{$row['percent2']}</td>
+                        <td>{$row['exam3']}</td>
+                        <td>{$row['percent3']}</td>
                         <td>
                             <form method='post' action=''>
                                 <button type='submit' name='idv' value={$row['id']} style='cursor:pointer;border: none;background: transparent;outline-style: none'>
@@ -63,7 +63,6 @@ $res = mysqli_query($con, $q1);
     </table>
     <div class="sort-btn">
         <a href="AdminPanel.php" class="submit-btn" style="text-decoration: none;background: #f46f30;font-size: 12px;">Back</a>
-        <a href="sortITsecond.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">I.F</a>
     </div>
 </div>
 <?php include('footer.php') ?>

@@ -15,9 +15,7 @@ $res = mysqli_query($con, $q1);
 <body>
 <?php include('AdminMenubar.php') ?>
 <div class="panel">
-    <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px">Boys</a>
-    <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px">Girls</a>
-    <h1>Boys Hostel Records</h1>
+    <h1>Boys Hostel First Year Records</h1>
     <table style="margin: auto">
         <tbody>
         <tr>
@@ -64,7 +62,8 @@ $res = mysqli_query($con, $q1);
         </tbody>
     </table>
     <div class="sort-btn">
-        <a href="sortpercent.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Sort by Percentage</a>
+        <a href="AdminPanel.php" class="submit-btn" style="text-decoration: none;background: #f46f30;font-size: 12px;">Back</a>
+        <a href="sortit.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">I.F</a>
     </div>
 </div>
 <?php include('footer.php') ?>

@@ -238,10 +238,12 @@
                 } elseif ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png') {
                     if (!move_uploaded_file("$tmp_name", "$target/$file_name")) {
                         echo "<p>Error in moving file.</p>";
-                        $file_path = "";
-                    }else{
-                        $file_path = "/hostel/uploads/" . $file_name;
                     }
+                }
+                if(isset($_POST['r_file'])){
+                    $file_path = "/hostel/uploads/" . $file_name;
+                }else{
+                    $file_path="";
                 }
                 $q = "INSERT INTO `hostel`(`s_name`, `e_year`, `semester`, `branch`, `gender`, `father_name`, `guardian`, `student_address`, `parent_address`, `parent_mobile`, `guardian_relation`, `reserve_cate`, `reserve_details`, `reserve_file`, `hostel_before`, `prev_year`, `prev_branch`, `prev_room`, `exam1`, `total1`, `obtain1`, `class1`, `exam2`, `total2`, `obtain2`, `class2`, `exam3`, `total3`, `obtain3`, `class3`, `policy`, `d_o_application`,`percent1`,`percent2`,`percent3`) VALUES ('$s_name','$year','$sem','$branch','$gender','$f_name','$g_name','$s_address','$f_address','$f_mob','$g_relation','$res','$r_details','$file_path','$hostel','$prev_year','$prev_branch','$prev_room','$exam1','$tmarks1','$omarks1','$class1','$exam2','$tmarks2','$omarks2','$class2','$exam3','$tmarks3','$omarks3','$class3','$policy',CURRENT_DATE,'$percent1','$percent2','$percent3')";
                 if (mysqli_query($con, $q)) {
