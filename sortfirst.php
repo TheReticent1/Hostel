@@ -1,7 +1,7 @@
 <?php
 include('SessionVarCheck.php');
 include('connection.php');
-$q1 = "select * from hostel where gender = 'male'";
+$q1 = "select * from hostel where e_year = 'first year' and  semester = 'first sem' and gender = 'male'";
 $res = mysqli_query($con, $q1);
 ?>
 <html>
@@ -27,12 +27,8 @@ $res = mysqli_query($con, $q1);
             <th>Year</th>
             <th>Semester</th>
             <th>Reserve Category</th>
-            <th>exam1</th>
-            <th>Precent1</th>
-            <th>exam2</th>
-            <th>Precent2</th>
-            <th>exam3</th>
-            <th>Precent3</th>
+            <th>Exam</th>
+            <th>Precent</th>
             <th>Action</th>
         </tr>
         <?php
@@ -45,10 +41,6 @@ $res = mysqli_query($con, $q1);
                         <td>{$row['reserve_cate']}</td>
                         <td>{$row['exam1']}</td>
                         <td>{$row['percent1']}</td>
-                        <td>{$row['exam2']}</td>
-                        <td>{$row['percent2']}</td>
-                        <td>{$row['exam3']}</td>
-                        <td>{$row['percent3']}</td>
                         <td>
                             <form method='post' action=''>
                                 <button type='submit' name='idv' value={$row['id']} style='cursor:pointer;border: none;background: transparent;outline-style: none'>
@@ -72,9 +64,7 @@ $res = mysqli_query($con, $q1);
         </tbody>
     </table>
     <div class="sort-btn">
-        <a href="sortfirst.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">First Year</a>
-        <a href="sortsecond.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Second Year</a>
-        <a href="sortthird.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Third Year</a>
+        <a href="sortpercent.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Sort by Percentage</a>
     </div>
 </div>
 <?php include('footer.php') ?>

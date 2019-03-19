@@ -64,7 +64,7 @@ $res = mysqli_query($con, $q1);
                 $_SESSION['view'] = $_POST['idv'];
                 header("Location:A_viewhostel.php");
             }if (isset($_POST['ide'])) {
-                $_SESSION['edi'] = $_POST['ide'];
+                $_SESSION['edit'] = $_POST['ide'];
                 header("Location:A_edithostel.php");
             }
         }
@@ -72,6 +72,11 @@ $res = mysqli_query($con, $q1);
 
         </tbody>
     </table>
+    <div class="sort-btn">
+        <a href="sortgfirst.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">First Year</a>
+        <a href="sortgsecond.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Second Year</a>
+        <a href="sortgthird.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Third Year</a>
+    </div>
 </div>
 <?php include('footer.php') ?>
 </body>
