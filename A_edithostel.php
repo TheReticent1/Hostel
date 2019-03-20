@@ -236,32 +236,38 @@ $res = mysqli_query($con, $q1);
                 $file_path = "";
             }
             if ($f_name.trim(" ") == null && $g_name.trim(" ") == null){
-                echo "<p>Please enter either father or guardian name</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter either father or guardian name</p>";
             }elseif ($g_name.trim(" ") != null && $g_relation.trim(" ") == null){
-                echo "<p>Please enter relation with guardian.</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter relation with guardian.</p>";
             }elseif (!preg_match('/^[0-9]{10}+$/', $f_mob)){
-                echo "<p>Please enter valid 10 digit mobile number</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter valid 10 digit mobile number</p>";
             }elseif ($f_name.trim(" ") != null && $g_name.trim(" ") != null ){
-                echo "<p>Please enter any one name father or guardian</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter any one name father or guardian</p>";
             }elseif ($res == 'yes' && $r_details.trim("") == null){
-                echo "<p>Please enter details of reserved category proof.</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter details of reserved category proof.</p>";
             }elseif ($res == 'yes' && $r_file == null){
-                echo "<p>Please upload reserve category proof document.</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please upload reserve category proof document.</p>";
             }elseif ($hostel == 'yes' && $prev_room.trim("") == null){
-                echo "<p>Please enter previous room no.</p>";
-            } elseif ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png') {
-                if (!move_uploaded_file("$tmp_name", "$target/$file_name")) {
-                    echo "<p>Error in moving file.</p>";
-                    $file_path = "";
-                }else{
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter previous room no.</p>";
+            }elseif (!isset($_POST['r_file']) && $res == 'yes'){
+                echo "<p style='color: red;width: 100%;text-align: center'>Please upload proof.</p>";
+            }else{
+                if(isset($_POST['r_file'])){
                     $file_path = "/hostel/uploads/" . $file_name;
+                    if ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png') {
+                        if (!move_uploaded_file("$tmp_name", "$target/$file_name")) {
+                            echo "<p style='color: red;width: 100%;text-align: center'>Error in moving file.</p>";
+                        }
+                    }
+                }else{
+                    $file_path="";
                 }
-            }
-            $q = "UPDATE `hostel` SET `s_name`='$s_name',`e_year`='$year',`semester`='$sem',`branch`='$branch',`gender`='$gender',`father_name`='$f_name',`guardian`='$g_name',`student_address`='$s_address',`parent_address`='$f_address',`parent_mobile`='$f_mob',`guardian_relation`='$g_relation',`reserve_cate`='$res',`reserve_details`='$r_details',`reserve_file`='$file_path',`hostel_before`='$hostel',`prev_year`='$prev_year',`prev_branch`='$prev_branch',`prev_room`='$prev_room',`exam1`='$exam1',`total1`='$tmarks1',`obtain1`='$omarks1',`class1`='$class1',`exam2`='$exam2',`total2`='$tmarks2',`obtain2`='$omarks2',`class2`='$class2',`exam3`='$exam3',`total3`='$tmarks3',`obtain3`='$omarks3',`class3`='$class3',`policy`='$policy',`percent1`='$percent1',`percent2`='$percent2',`percent3`='$percent3' WHERE id={$_SESSION['edit']}";
-            if (mysqli_query($con, $q)) {
-                echo "<p>Form updated Successfully</p>";
-            } else {
-                echo "<p>Error in updating.</p>";
+                $q = "UPDATE `hostel` SET `s_name`='$s_name',`e_year`='$year',`semester`='$sem',`branch`='$branch',`gender`='$gender',`father_name`='$f_name',`guardian`='$g_name',`student_address`='$s_address',`parent_address`='$f_address',`parent_mobile`='$f_mob',`guardian_relation`='$g_relation',`reserve_cate`='$res',`reserve_details`='$r_details',`reserve_file`='$file_path',`hostel_before`='$hostel',`prev_year`='$prev_year',`prev_branch`='$prev_branch',`prev_room`='$prev_room',`exam1`='$exam1',`total1`='$tmarks1',`obtain1`='$omarks1',`class1`='$class1',`exam2`='$exam2',`total2`='$tmarks2',`obtain2`='$omarks2',`class2`='$class2',`exam3`='$exam3',`total3`='$tmarks3',`obtain3`='$omarks3',`class3`='$class3',`policy`='$policy',`percent1`='$percent1',`percent2`='$percent2',`percent3`='$percent3' WHERE id={$_SESSION['edit']}";
+                if (mysqli_query($con, $q)) {
+                    echo "<p style='color: green;width: 100%;text-align: center'>Form updated Successfully</p>";
+                } else {
+                    echo "<p style='color: red;width: 100%;text-align: center'>Error in updating.</p>";
+                }
             }
         }
         ?>

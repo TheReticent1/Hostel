@@ -2,6 +2,7 @@
     <img src="images/logo.png">
     <div class="heading">
         <h1>Government Polytechnic Washim Hostel</h1>
+        <p style="font-size: 12px">Risod Road, Lakhala, Washim, Maharashtra 444505</p>
         <p>Contact &nbsp;<i class="fa fa-phone"> </i>&nbsp; +91 88888-88888</p>
     </div>
     <div class="social">

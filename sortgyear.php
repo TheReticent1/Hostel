@@ -87,10 +87,10 @@ if (isset($_POST['gty'])){
                     name=\"ce\">C.E
             </button>
             <button type=\"submit\" class=\"submit-btn\" style=\"background: #1DA1F2;font-size: 12px;margin: 0 5px\"
-                    name=\"ee\">E.E
+                    name=\"ee\">E&Tc
             </button>
             <button type=\"submit\" class=\"submit-btn\" style=\"background: #1DA1F2;font-size: 12px;margin: 0 5px\"
-                    name=\"etc\">E&TC
+                    name=\"etc\">E.E
             </button>
         </form>
     </div>";
@@ -112,10 +112,10 @@ if (isset($_POST['gty'])){
                     name=\"sce\">C.E
             </button>
             <button type=\"submit\" class=\"submit-btn\" style=\"background: #1DA1F2;font-size: 12px;margin: 0 5px\"
-                    name=\"see\">E.E
+                    name=\"see\">E&Tc
             </button>
             <button type=\"submit\" class=\"submit-btn\" style=\"background: #1DA1F2;font-size: 12px;margin: 0 5px\"
-                    name=\"setc\">E&TC
+                    name=\"setc\">E.E
             </button>
         </form>
     </div>";
@@ -137,10 +137,10 @@ if (isset($_POST['gty'])){
                     name=\"tce\">C.E
             </button>
             <button type=\"submit\" class=\"submit-btn\" style=\"background: #1DA1F2;font-size: 12px;margin: 0 5px\"
-                    name=\"tee\">E.E
+                    name=\"tee\">E&Tc
             </button>
             <button type=\"submit\" class=\"submit-btn\" style=\"background: #1DA1F2;font-size: 12px;margin: 0 5px\"
-                    name=\"tetc\">E&TC
+                    name=\"tetc\">E.E
             </button>
         </form>
     </div>";

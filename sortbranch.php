@@ -23,12 +23,12 @@ if (isset($_POST['ce'])){
 }if (isset($_POST['ee'])){
     $q1 = "select * from hostel where e_year = 'first year' and  semester = 'first sem' and gender = 'male' and branch = 'electronic'";
     $res = mysqli_query($con, $q1);
-    $branch = 'Boys First Year E.E';
+    $branch = 'Boys First Year E&Tc';
 }
 if (isset($_POST['etc'])){
     $q1 = "select * from hostel where e_year = 'first year' and  semester = 'first sem' and gender = 'male' and branch = 'electrical'";
     $res = mysqli_query($con, $q1);
-    $branch = 'Boys First Year E&TC';
+    $branch = 'Boys First Year E.E';
 }
 
 if (isset($_POST['sif'])){
@@ -54,12 +54,12 @@ if (isset($_POST['sce'])){
 if (isset($_POST['see'])){
     $q1 = "select * from hostel where e_year = 'second year' and  semester = 'third sem' and gender = 'male' and branch = 'electronic'";
     $res = mysqli_query($con, $q1);
-    $branch = 'Boys Second Year E.E';
+    $branch = 'Boys Second Year E&Tc';
 }
 if (isset($_POST['setc'])){
     $q1 = "select * from hostel where e_year = 'second year' and  semester = 'third sem' and gender = 'male' and branch = 'electrical'";
     $res = mysqli_query($con, $q1);
-    $branch = 'Boys Second Year E&Tc';
+    $branch = 'Boys Second Year E.E';
 }
 
 if (isset($_POST['tif'])){
@@ -85,12 +85,12 @@ if (isset($_POST['tce'])){
 if (isset($_POST['tee'])){
     $q1 = "select * from hostel where e_year = 'third year' and  semester = 'fifth sem' and gender = 'male' and branch = 'electronic'";
     $res = mysqli_query($con, $q1);
-    $branch = 'Boys Third Year E.E';
+    $branch = 'Boys Third Year E&Tc';
 }
 if (isset($_POST['tetc'])){
     $q1 = "select * from hostel where e_year = 'third year' and  semester = 'fifth sem' and gender = 'male' and branch = 'electrical'";
     $res = mysqli_query($con, $q1);
-    $branch = 'Boys Third Year E&TC';
+    $branch = 'Boys Third Year E.E';
 }
 ?>
 <html>

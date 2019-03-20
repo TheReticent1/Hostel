@@ -16,9 +16,9 @@ include('connection.php');
     <form action="" method="post">
         <h1>Staff Login</h1>
         <input type="text" class="control" placeholder="&#xf2bd; Username" style="font-family: FontAwesome;"
-               name="uname">
+               name="uname" required>
         <input type="password" class="control" placeholder="&#xf084; Password" style="font-family: FontAwesome;"
-               name="pass">
+               name="pass" required>
         <input type="submit" class="login-btn" value="&#xf090;  Login" style="font-family: FontAwesome;" name="submit">
     </form>
 
@@ -36,10 +36,10 @@ include('connection.php');
                 $_SESSION['username'] = $row['username'];
                 header("Location:AdminPanel.php");
             } else {
-                echo 'invalid password';
+                echo "<p style='color: red;width: 100%;text-align: center'>invalid password</p>";
             }
         } else {
-            echo 'invalid username and password';
+            echo "<p style='color: red;width: 100%;text-align: center'>invalid username and password</p>";
         }
     }
     ?>

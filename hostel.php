@@ -222,34 +222,38 @@
                 }
 
                 if ($f_name.trim(" ") == null && $g_name.trim(" ") == null){
-                    echo "<p>Please enter either father or guardian name</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please enter either father or guardian name</p>";
                 }elseif ($g_name.trim(" ") != null && $g_relation.trim(" ") == null){
-                    echo "<p>Please enter relation with guardian.</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please enter relation with guardian.</p>";
                 }elseif (!preg_match('/^[0-9]{10}+$/', $f_mob)){
-                    echo "<p>Please enter valid 10 digit mobile number</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please enter valid 10 digit mobile number</p>";
                 }elseif ($f_name.trim(" ") != null && $g_name.trim(" ") != null ){
-                    echo "<p>Please enter any one name father or guardian</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please enter any one name father or guardian</p>";
                 }elseif ($res == 'yes' && $r_details.trim("") == null){
-                    echo "<p>Please enter details of reserved category proof.</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please enter details of reserved category proof.</p>";
                 }elseif ($res == 'yes' && $r_file == null){
-                    echo "<p>Please upload reserve category proof document.</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please upload reserve category proof document.</p>";
                 }elseif ($hostel == 'yes' && $prev_room.trim("") == null){
-                    echo "<p>Please enter previous room no.</p>";
-                } elseif ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png') {
-                    if (!move_uploaded_file("$tmp_name", "$target/$file_name")) {
-                        echo "<p>Error in moving file.</p>";
-                    }
-                }
-                if(isset($_POST['r_file'])){
-                    $file_path = "/hostel/uploads/" . $file_name;
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please enter previous room no.</p>";
+                }elseif (!isset($_POST['r_file']) && $res == 'yes'){
+                    echo "<p style='color: red;width: 100%;text-align: center'>Please upload proof.</p>";
                 }else{
-                    $file_path="";
-                }
-                $q = "INSERT INTO `hostel`(`s_name`, `e_year`, `semester`, `branch`, `gender`, `father_name`, `guardian`, `student_address`, `parent_address`, `parent_mobile`, `guardian_relation`, `reserve_cate`, `reserve_details`, `reserve_file`, `hostel_before`, `prev_year`, `prev_branch`, `prev_room`, `exam1`, `total1`, `obtain1`, `class1`, `exam2`, `total2`, `obtain2`, `class2`, `exam3`, `total3`, `obtain3`, `class3`, `policy`, `d_o_application`,`percent1`,`percent2`,`percent3`) VALUES ('$s_name','$year','$sem','$branch','$gender','$f_name','$g_name','$s_address','$f_address','$f_mob','$g_relation','$res','$r_details','$file_path','$hostel','$prev_year','$prev_branch','$prev_room','$exam1','$tmarks1','$omarks1','$class1','$exam2','$tmarks2','$omarks2','$class2','$exam3','$tmarks3','$omarks3','$class3','$policy',CURRENT_DATE,'$percent1','$percent2','$percent3')";
-                if (mysqli_query($con, $q)) {
-                    echo "<p>Form submitted Successfully</p>";
-                } else {
-                    echo "<p>Error in submitting.</p>";
+                    if(isset($_POST['r_file'])){
+                        $file_path = "/hostel/uploads/" . $file_name;
+                        if ($type == 'application/pdf' || $type == 'image/jpeg' || $type == 'image/png') {
+                            if (!move_uploaded_file("$tmp_name", "$target/$file_name")) {
+                                echo "<p style='color: red;width: 100%;text-align: center'>Error in moving file.</p>";
+                            }
+                        }
+                    }else{
+                        $file_path="";
+                    }
+                    $q = "INSERT INTO `hostel`(`s_name`, `e_year`, `semester`, `branch`, `gender`, `father_name`, `guardian`, `student_address`, `parent_address`, `parent_mobile`, `guardian_relation`, `reserve_cate`, `reserve_details`, `reserve_file`, `hostel_before`, `prev_year`, `prev_branch`, `prev_room`, `exam1`, `total1`, `obtain1`, `class1`, `exam2`, `total2`, `obtain2`, `class2`, `exam3`, `total3`, `obtain3`, `class3`, `policy`, `d_o_application`,`percent1`,`percent2`,`percent3`) VALUES ('$s_name','$year','$sem','$branch','$gender','$f_name','$g_name','$s_address','$f_address','$f_mob','$g_relation','$res','$r_details','$file_path','$hostel','$prev_year','$prev_branch','$prev_room','$exam1','$tmarks1','$omarks1','$class1','$exam2','$tmarks2','$omarks2','$class2','$exam3','$tmarks3','$omarks3','$class3','$policy',CURRENT_DATE,'$percent1','$percent2','$percent3')";
+                    if (mysqli_query($con, $q)) {
+                        echo "<p style='color: green;width: 100%;text-align: center'>Form submitted Successfully</p>";
+                    } else {
+                        echo "<p style='color: red;width: 100%;text-align: center'>Error in submitting.</p>";
+                    }
                 }
             }
         ?>

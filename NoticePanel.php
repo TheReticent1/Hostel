@@ -14,14 +14,13 @@ include ('SessionVarCheck.php');
 <div class="grievance">
     <h1>Add Notice</h1>
     <form method="post" enctype="multipart/form-data" action="">
-        <input type="text" placeholder="Title" class="control marginer" name="title">
-        <input type="file" class="control marginer" name="file">
+        <input type="text" placeholder="Title" class="control marginer" name="title" required>
+        <input type="file" class="control marginer" name="file" required>
         <textarea rows="5" cols="50" placeholder="Description"
-                  class="control marginer txt-area" name="description"></textarea>
+                  class="control marginer txt-area" name="description" required></textarea>
         <input type="submit" value="Add Notice" class="submit-btn marginer" name="submit">
     </form>
     <?php
-//        session_start();
         include ('connection.php');
         if(isset($_POST['submit'])){
             $file=$_FILES['file'];
@@ -39,13 +38,13 @@ include ('SessionVarCheck.php');
                     if(mysqli_query($con,$query)){
                         header('Location:ViewNotice.php');
                     }else{
-                        echo "<p>Error in creating notice</p>";
+                        echo "<p style='color: red;width: 100%;text-align: center'>Error in creating notice</p>";
                     }
                 }else{
-                    echo "<p>Error in uploading pdf file.</p>";
+                    echo "<p style='color: red;width: 100%;text-align: center'>Error in uploading pdf file.</p>";
                 }
             }else{
-                echo "<p>Please enter pdf files only</p>";
+                echo "<p style='color: red;width: 100%;text-align: center'>Please enter pdf files only</p>";
             }
         }
     ?>

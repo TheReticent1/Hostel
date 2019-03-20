@@ -15,8 +15,8 @@ include ('SessionVarCheck.php');
 <div class="login">
     <form action="" method="post">
         <h1>Register</h1>
-        <input type="text" class="control" placeholder="&#xf2bd; Username" style="font-family: FontAwesome;" name="uname">
-        <input type="password" class="control" placeholder="&#xf084; Password" style="font-family: FontAwesome;" name="pass">
+        <input type="text" class="control" placeholder="&#xf2bd; Username" style="font-family: FontAwesome;" name="uname" required>
+        <input type="password" class="control" placeholder="&#xf084; Password" style="font-family: FontAwesome;" name="pass" required>
         <input type="submit" class="login-btn" value="&#xf090;  Register" style="font-family: FontAwesome;" name="register">
     </form>
 
