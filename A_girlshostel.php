@@ -16,7 +16,7 @@ $res = mysqli_query($con, $q1);
 <?php include('AdminMenubar.php') ?>
 <div class="panel">
     <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px">Boys</a>
-    <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px">Girls</a>
+    <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px;background: #09AB00">Girls</a>
     <h1>Girls Hostel Records</h1>
     <table style="margin: auto" id="girls">
         <thead>

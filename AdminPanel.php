@@ -12,8 +12,6 @@ $res = mysqli_query($con, $q1);
 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-<!--    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>-->
-<!--    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>-->
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -21,7 +19,7 @@ $res = mysqli_query($con, $q1);
 <body>
 <?php include('AdminMenubar.php') ?>
 <div class="panel">
-    <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px">Boys</a>
+    <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px;background: #09AB00">Boys</a>
     <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px">Girls</a>
     <h1>Boys Hostel Records</h1>
     <table style="margin: auto" id="demo">

@@ -20,7 +20,8 @@ $res = mysqli_query($con, $q1);
         <h3>Hostel Entry Application 2019-2020</h3>
          <?php
         while ($row = mysqli_fetch_assoc($res)){
-            echo "        <form action=\"\" method=\"post\" enctype=\"multipart/form-data\">
+            echo "        
+            <form action=\"\" method=\"post\" enctype=\"multipart/form-data\">
             <input type=\"text\" placeholder=\"Applicant Full Name\" name=\"s_name\" class=\"control controller\" required value=\"{$row['s_name']}\">
             <div style=\"display: flex\">
                 <select class=\"selector\" name=\"year\" required>
@@ -176,8 +177,7 @@ $res = mysqli_query($con, $q1);
                     hostel by higher authorities.</p>
             </div>
             <input type=\"submit\" class=\"login-btn marginer\" style=\"width: 93%\" value=\"Update Application\" name=\"submit\">
-        </form>
-";
+        </form>";
         }
         ?>
         <?php
@@ -232,6 +232,9 @@ $res = mysqli_query($con, $q1);
                 $percent3 = 0;
             }
 
+            if (!isset($_POST['r_file'])){
+                $file_path = "";
+            }
             if ($f_name.trim(" ") == null && $g_name.trim(" ") == null){
                 echo "<p>Please enter either father or guardian name</p>";
             }elseif ($g_name.trim(" ") != null && $g_relation.trim(" ") == null){
@@ -254,7 +257,7 @@ $res = mysqli_query($con, $q1);
                     $file_path = "/hostel/uploads/" . $file_name;
                 }
             }
-            $q = "UPDATE `hostel` SET `s_name`='$s_name',`e_year`='$year',`semester`='$sem',`branch`='$branch',`gender`='$gender',`father_name`='$f_name',`guardian`='$g_name',`student_address`='$s_address',`parent_address`='$f_address',`parent_mobile`='$f_mob',`guardian_relation`='$g_relation',`reserve_cate`='$res',`reserve_details`='$r_details',`reserve_file`='$r_file',`hostel_before`='$hostel',`prev_year`='$prev_year',`prev_branch`='$prev_branch',`prev_room`='$prev_room',`exam1`='$exam1',`total1`='$tmarks1',`obtain1`='$omarks1',`class1`='$class1',`exam2`='$exam2',`total2`='$tmarks2',`obtain2`='$omarks2',`class2`='$class2',`exam3`='$exam3',`total3`='$tmarks3',`obtain3`='$omarks3',`class3`='$class3',`policy`='$policy',`percent1`='$percent1',`percent2`='$percent2',`percent3`='$percent3' WHERE id={$_SESSION['edit']}";
+            $q = "UPDATE `hostel` SET `s_name`='$s_name',`e_year`='$year',`semester`='$sem',`branch`='$branch',`gender`='$gender',`father_name`='$f_name',`guardian`='$g_name',`student_address`='$s_address',`parent_address`='$f_address',`parent_mobile`='$f_mob',`guardian_relation`='$g_relation',`reserve_cate`='$res',`reserve_details`='$r_details',`reserve_file`='$file_path',`hostel_before`='$hostel',`prev_year`='$prev_year',`prev_branch`='$prev_branch',`prev_room`='$prev_room',`exam1`='$exam1',`total1`='$tmarks1',`obtain1`='$omarks1',`class1`='$class1',`exam2`='$exam2',`total2`='$tmarks2',`obtain2`='$omarks2',`class2`='$class2',`exam3`='$exam3',`total3`='$tmarks3',`obtain3`='$omarks3',`class3`='$class3',`policy`='$policy',`percent1`='$percent1',`percent2`='$percent2',`percent3`='$percent3' WHERE id={$_SESSION['edit']}";
             if (mysqli_query($con, $q)) {
                 echo "<p>Form updated Successfully</p>";
             } else {
