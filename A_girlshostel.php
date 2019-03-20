@@ -18,8 +18,8 @@ $res = mysqli_query($con, $q1);
     <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px">Boys</a>
     <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px">Girls</a>
     <h1>Girls Hostel Records</h1>
-    <table style="margin: auto">
-        <tbody>
+    <table style="margin: auto" id="girls">
+        <thead>
         <tr>
             <th>Index</th>
             <th>Name</th>
@@ -35,6 +35,8 @@ $res = mysqli_query($con, $q1);
             <th>Precent3</th>
             <th>Action</th>
         </tr>
+        </thead>
+        <tbody>
         <?php
         while ($row = mysqli_fetch_assoc($res)) {
             echo "<tr><td>{$row['id']}</td>
@@ -73,11 +75,25 @@ $res = mysqli_query($con, $q1);
         </tbody>
     </table>
     <div class="sort-btn">
-        <a href="sortgfirst.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">First Year</a>
-        <a href="sortgsecond.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Second Year</a>
-        <a href="sortgthird.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Third Year</a>
+        <form action="sortgyear.php" method="post" style="display: flex">
+            <button type="submit" name="gfy" class="submit-btn" style="background: #1DA1F2;font-size: 12px;margin: 0 5px;width: auto">1st Year</button>
+            <button type="submit" name="gsy" class="submit-btn" style="background: #1DA1F2;font-size: 12px;margin: 0 5px;width: auto">2nd Year</button>
+            <button type="submit" name="gty" class="submit-btn" style="background: #1DA1F2;font-size: 12px;margin: 0 5px;width: auto">3rd Year</button>
+        </form>
     </div>
 </div>
 <?php include('footer.php') ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+        $('#girls').DataTable();
+    } );
+</script>
 </body>
 </html>

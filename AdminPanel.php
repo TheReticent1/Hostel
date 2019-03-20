@@ -7,9 +7,15 @@ $res = mysqli_query($con, $q1);
 <html>
 <head>
     <title> Staff Login</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!--    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>-->
+<!--    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>-->
     <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
@@ -18,8 +24,8 @@ $res = mysqli_query($con, $q1);
     <a href="AdminPanel.php" class="login-btn" style="text-decoration: none;margin: 5px">Boys</a>
     <a href="A_girlshostel.php" class="login-btn" style="text-decoration: none;margin: 5px">Girls</a>
     <h1>Boys Hostel Records</h1>
-    <table style="margin: auto">
-        <tbody>
+    <table style="margin: auto" id="demo">
+        <thead>
         <tr>
             <th>Index</th>
             <th>Name</th>
@@ -35,6 +41,8 @@ $res = mysqli_query($con, $q1);
             <th>Precent3</th>
             <th>Action</th>
         </tr>
+        </thead>
+        <tbody>
         <?php
         while ($row = mysqli_fetch_assoc($res)) {
             echo "<tr><td>{$row['id']}</td>
@@ -60,6 +68,7 @@ $res = mysqli_query($con, $q1);
                             </form>
                         </td>
                    </tr>";
+
             if (isset($_POST['idv'])) {
                 $_SESSION['view'] = $_POST['idv'];
                 header("Location:A_viewhostel.php");
@@ -72,11 +81,26 @@ $res = mysqli_query($con, $q1);
         </tbody>
     </table>
     <div class="sort-btn">
-        <a href="sortfirst.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">First Year</a>
-        <a href="sortsecond.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Second Year</a>
-        <a href="sortthird.php" class="submit-btn" style="text-decoration: none;background: #1DA1F2;font-size: 12px;">Third Year</a>
+        <form action="sortyear.php" method="post" style="display: flex">
+            <button type="submit" class="submit-btn" style="background: #1DA1F2;font-size: 12px;margin: 0 5px;width: auto" name="fy">1st Year</button>
+            <button type="submit" class="submit-btn" style="background: #1DA1F2;font-size: 12px;margin: 0 5px;width: auto" name="sy">2nd Year</button>
+            <button type="submit" class="submit-btn" style="background: #1DA1F2;font-size: 12px;margin: 0 5px;width: auto" name="ty">3rd Year</button>
+        </form>
     </div>
 </div>
 <?php include('footer.php') ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+        $('#demo').DataTable();
+    } );
+</script>
+
 </body>
 </html>
